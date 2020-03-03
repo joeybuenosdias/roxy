@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Roxy",
+    "description": "This extension changes lives",
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "<all_urls>",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "32": "roxy-favicon-32.png",
+            "64": "roxy-favicon-64.png",
+            "128": "roxy-favicon-128.png"
+        },
+        "default_title": "Roxy"
+    }
+}
